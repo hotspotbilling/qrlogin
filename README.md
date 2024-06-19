@@ -1,14 +1,15 @@
-# qrlogin - HMS
-## QR Code scanner for login hotspot MikroTik
+# QRcode Scanner
 
-### Cara pakai
+QR Code scanner for login hotspot MikroTik
 
-1. Tambahkan code button di login.html
+## How to use
+
+1. Add url button to login page
 ```
-<button onclick="window.location='https://hotspotms.github.io/qrlogin/?hotspot=Nama Hotspot Anda';">QR Login</button>
+<button onclick="window.location='https://hotspotbilling.github.io/qrlogin/?hotspot=Your company&back=encoded url for back to login';">QR Login</button>
 ```
-2. Tambahkan script berikut di MikroTik via terminal.
+2. Add walled garden, run this script in MikroTik terminal.
 ```
 /ip hotspot walled-garden ip
-add action=accept comment="HMS QR Code Scanner" disabled=no dst-host=hotspotms.github.io
+add action=accept comment="QR Code Scanner" disabled=no dst-host=hotspotbilling.github.io
 ```
